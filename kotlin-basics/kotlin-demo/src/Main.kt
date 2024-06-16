@@ -1,20 +1,19 @@
-fun main() {
-    val unlistedAnimal = "cow"
-    val arrayString: Array<String> = arrayOf("dog", "cat", "fey")
-    println("One of these aren't animals: " + arrayString.contentToString())
-    val nonAnimal = arrayString[2]
-    println("Removing $nonAnimal")
-
-    // Convert the array to a mutable list, remove the element at the specified index, and convert back to an array if needed
-    val mutableList = arrayString.toMutableList()
-    mutableList.removeAt(2)
-    println("Adding $unlistedAnimal to the list at the second index...")
-    mutableList.add(1, unlistedAnimal)
-
-    // If you need it back as an array
-    val updatedArray = mutableList.toTypedArray()
-
-    for (item in updatedArray) {
-        println(item)
+class Car(private var make: String, private var model: String, private var color: String) {
+    fun printDetails() {
+        println("$color $make $model")
     }
+
+    fun maxSpeed(carSpeed: Int) {
+        println("Top speed of the $make $model is ${carSpeed}km/h!")
+    }
+}
+
+fun main() {
+    val carOne = Car("BMW", "i3", "Orange")
+    val carTwo = Car("Porsche", "911", "Yellow")
+
+    carOne.printDetails()
+    carOne.maxSpeed(200)
+    carTwo.printDetails()
+    carTwo.maxSpeed(250)
 }
