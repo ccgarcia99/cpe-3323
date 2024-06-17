@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greetingcard.app-mergeDebugResources-42:/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "com.example.testapp-mergeDebugResources-42:/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/3fee29e3450672315393eb8ab9104aa8/transformed/material3-release/res/values-pt-rPT/values-pt-rPT.xml",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/8d426630562ca7afdef46a3c1e193a32/transformed/core-1.12.0/res/values-pt-rPT/values-pt-rPT.xml",
+                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/586e550422b6e33dbfd0b575c8ba5703/transformed/core-1.13.1/res/values-pt-rPT/values-pt-rPT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

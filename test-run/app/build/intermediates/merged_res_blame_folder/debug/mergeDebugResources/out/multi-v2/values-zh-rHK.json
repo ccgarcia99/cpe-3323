@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greetingcard.app-mergeDebugResources-42:/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "com.example.testapp-mergeDebugResources-42:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
-                {
-                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/8d426630562ca7afdef46a3c1e193a32/transformed/core-1.12.0/res/values-zh-rHK/values-zh-rHK.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,147,246,340,434,527,620,716",
-                        "endColumns": "91,98,93,93,92,92,95,100",
-                        "endOffsets": "142,241,335,429,522,615,711,812"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,79",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,197,296,390,484,577,670,7247",
-                        "endColumns": "91,98,93,93,92,92,95,100",
-                        "endOffsets": "192,291,385,479,572,665,761,7343"
-                    }
-                },
                 {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/03b990499334c95490bd64391a5da0b5/transformed/ui-release/res/values-zh-rHK/values-zh-rHK.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "766,842,916,1004,1095,1173,1247,6754,6832,6906,6969,7032,7105,7180,7348,7423,7488",
                         "endColumns": "75,73,87,90,77,73,76,77,73,62,62,72,74,66,74,64,115",
                         "endOffsets": "837,911,999,1090,1168,1242,1319,6827,6901,6964,7027,7100,7175,7242,7418,7483,7599"
+                    }
+                },
+                {
+                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/586e550422b6e33dbfd0b575c8ba5703/transformed/core-1.13.1/res/values-zh-rHK/values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,246,340,434,527,620,716",
+                        "endColumns": "91,98,93,93,92,92,95,100",
+                        "endOffsets": "142,241,335,429,522,615,711,812"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,79",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,197,296,390,484,577,670,7247",
+                        "endColumns": "91,98,93,93,92,92,95,100",
+                        "endOffsets": "192,291,385,479,572,665,761,7343"
                     }
                 },
                 {

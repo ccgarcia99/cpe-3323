@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greetingcard.app-mergeDebugResources-42:/values-iw/values-iw.xml",
+            "outputFile": "com.example.testapp-mergeDebugResources-42:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/3fee29e3450672315393eb8ab9104aa8/transformed/material3-release/res/values-iw/values-iw.xml",
@@ -38,23 +38,6 @@
                     }
                 },
                 {
-                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/8d426630562ca7afdef46a3c1e193a32/transformed/core-1.12.0/res/values-iw/values-iw.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,149,251,348,445,546,646,752",
-                        "endColumns": "93,101,96,96,100,99,105,100",
-                        "endOffsets": "144,246,343,440,541,641,747,848"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,79",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,199,301,398,495,596,696,7913",
-                        "endColumns": "93,101,96,96,100,99,105,100",
-                        "endOffsets": "194,296,393,490,591,691,797,8009"
-                    }
-                },
-                {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/0f19455246cd92315e30e7e19a1842c4/transformed/foundation-release/res/values-iw/values-iw.xml",
                     "from": {
                         "startLines": "2,3",
@@ -69,6 +52,23 @@
                         "startOffsets": "8278,8365",
                         "endColumns": "86,87",
                         "endOffsets": "8360,8448"
+                    }
+                },
+                {
+                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/586e550422b6e33dbfd0b575c8ba5703/transformed/core-1.13.1/res/values-iw/values-iw.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,149,251,348,445,546,646,752",
+                        "endColumns": "93,101,96,96,100,99,105,100",
+                        "endOffsets": "144,246,343,440,541,641,747,848"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,79",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,199,301,398,495,596,696,7913",
+                        "endColumns": "93,101,96,96,100,99,105,100",
+                        "endOffsets": "194,296,393,490,591,691,797,8009"
                     }
                 }
             ]

@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greetingcard.app-mergeDebugResources-42:/values-ja/values-ja.xml",
+            "outputFile": "com.example.testapp-mergeDebugResources-42:/values-ja/values-ja.xml",
             "map": [
+                {
+                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/586e550422b6e33dbfd0b575c8ba5703/transformed/core-1.13.1/res/values-ja/values-ja.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,247,341,437,530,623,724",
+                        "endColumns": "91,99,93,95,92,92,100,100",
+                        "endOffsets": "142,242,336,432,525,618,719,820"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,79",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,197,297,391,487,580,673,7471",
+                        "endColumns": "91,99,93,95,92,92,100,100",
+                        "endOffsets": "192,292,386,482,575,668,769,7567"
+                    }
+                },
                 {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/03b990499334c95490bd64391a5da0b5/transformed/ui-release/res/values-ja/values-ja.xml",
                     "from": {
@@ -18,23 +35,6 @@
                         "startOffsets": "774,860,938,1027,1124,1207,1285,6964,7049,7124,7188,7252,7326,7402,7572,7648,7713",
                         "endColumns": "85,77,88,96,82,77,77,84,74,63,63,73,75,68,75,64,116",
                         "endOffsets": "855,933,1022,1119,1202,1280,1358,7044,7119,7183,7247,7321,7397,7466,7643,7708,7825"
-                    }
-                },
-                {
-                    "source": "/home/ccdecierdo/.gradle/caches/transforms-4/8d426630562ca7afdef46a3c1e193a32/transformed/core-1.12.0/res/values-ja/values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,147,247,341,437,530,623,724",
-                        "endColumns": "91,99,93,95,92,92,100,100",
-                        "endOffsets": "142,242,336,432,525,618,719,820"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,79",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,197,297,391,487,580,673,7471",
-                        "endColumns": "91,99,93,95,92,92,100,100",
-                        "endOffsets": "192,292,386,482,575,668,769,7567"
                     }
                 },
                 {

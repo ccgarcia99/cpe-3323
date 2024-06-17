@@ -7,6 +7,6 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">Greeting Card</string>
-    <style name="Theme.GreetingCard" parent="android:Theme.Material.Light.NoActionBar"/>
+    <string name="app_name">Test App</string>
+    <style name="Theme.TestApp" parent="android:Theme.Material.Light.NoActionBar"/>
 </resources>
