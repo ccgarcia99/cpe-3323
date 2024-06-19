@@ -1,8 +1,0 @@
-class Main() {
-    
-    fun main() {
-
-    }
-
-}
-
