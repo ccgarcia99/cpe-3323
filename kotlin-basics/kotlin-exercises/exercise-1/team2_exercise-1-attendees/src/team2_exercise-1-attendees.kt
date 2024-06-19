@@ -17,10 +17,11 @@ fun main() {
 
     // Sort the list of attendees
     attendees.sort()
-
+    count = 1
     // Print the sorted list of attendees
     println("The following people have attended (sorted):")
     for (attendee in attendees) {
-        println(attendee)
+        println("$count: $attendee")
+        count++
     }
 }
