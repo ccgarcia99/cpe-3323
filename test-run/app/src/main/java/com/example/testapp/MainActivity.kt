@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.MaterialTheme
@@ -35,12 +37,21 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+// function: MyApp
+// desc: Common ancestor of all composable functions. Important check flags like
+//       shouldShowOnboarding variable reside here. The `Modifier` variable is first
+//       passed through here from the main class.
+// arguments: modifier: Modifier, names: List<String>
 @Composable
 fun MyApp(
     modifier: Modifier = Modifier,
-    names: List<String> = listOf("Test", "List", "Android", "Franthy")
+    names: List<String> = List(10){"$it"}
 ) {
+    // Check flag if button on OnboardingScreen function is pressed or not.
+    // shouldShowOnboarding's value is provided by the lambda function `remember`
     var shouldShowOnboarding by remember { mutableStateOf(true) }
+
+    // Check condition
     if(shouldShowOnboarding) {
         OnboardingScreen(onContinueClicked = {shouldShowOnboarding = false})
     } else {
@@ -48,24 +59,26 @@ fun MyApp(
     }
 }
 
+// function: MyListView
+// desc: This function builds a scrollable list on the UI with `LazyColumn`.
+// arguments: names - List<String> w/ List of 1..1000 as default, modifier: Modifier
 @Composable
 fun MyListView(
     modifier: Modifier,
-    names: List<String>
+    names: List<String> = List(1000){"$it"}
 ) {
-    Column(modifier.padding(vertical = 4.dp)) {
-        for (name in names) {
-            MyListBox(name = name)
-        }
+    LazyColumn(modifier = modifier.padding(vertical = 4.dp)) {
+        items(items = names) { name -> MyListBox(name = name)}
     }
 }
 
-
-// A UI element that will contain an element of a list. Iterated n number of times
-// for each element in the list.
-//@SuppressLint("RememberReturnType")
+// function: MyListBox
+// desc: Renders a box container with a text element and an elevated button inside,
+//       is iteratively called & rendered through the `MyListView` function
+// arguments: name - String, modifier - Modifier w/ Modifier as default parameter
 @Composable
 fun MyListBox(name: String, modifier: Modifier = Modifier) {
+    // Check flag if button is pressed or not
     val expanded = remember { mutableStateOf(false) }
     val expandPadding = if(expanded.value) 48.dp else 0.dp
     Surface(
@@ -88,9 +101,11 @@ fun MyListBox(name: String, modifier: Modifier = Modifier) {
     }
 }
 
+// function:    OnboardingScreen
+// desc:        A composable function that renders an onboarding screen when opening the app
+// arguments:   modifier - Modifier, onContinueClicked - void lambda function
 @Composable
 fun OnboardingScreen(modifier: Modifier = Modifier, onContinueClicked: () -> Unit) {
-
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,

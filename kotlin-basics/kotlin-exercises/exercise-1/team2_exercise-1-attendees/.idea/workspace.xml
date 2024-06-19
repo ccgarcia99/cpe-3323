@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6147292f-7bdc-42da-9ced-e9867ec1bd1b" name="Changes" comment="CREATED exercise 1 - list of attendees">
-      <change beforePath="$PROJECT_DIR$/out/production/team2_exercise-1-attendees/Team2_exercise_1_attendeesKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/team2_exercise-1-attendees/Team2_exercise_1_attendeesKt.class" afterDir="false" />
-    </list>
+    <list default="true" id="6147292f-7bdc-42da-9ced-e9867ec1bd1b" name="Changes" comment="CREATED exercise 1 - list of attendees" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +34,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3233/kotlin-basics/kotlin-exercises/exercise-1/team2_exercise-1-attendees-revised",
     "onboarding.tips.debug.path": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3233/kotlin-basics/kotlin-exercises/exercise-1/team2_exercise-1-attendees/src/Main.kt"
   }
 }]]></component>
