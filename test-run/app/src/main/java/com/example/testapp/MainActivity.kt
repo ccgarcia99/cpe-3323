@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp(
     modifier: Modifier = Modifier,
-    names: List<String> = listOf("Test", "List", "Android")
+    names: List<String> = listOf("Test", "List", "Android", "Franthy")
 ) {
     var shouldShowOnboarding by remember { mutableStateOf(true) }
     if(shouldShowOnboarding) {
