@@ -1,8 +1,10 @@
 package com.example.testapp
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,10 +20,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.testapp.ui.theme.TestAppTheme
@@ -45,11 +49,11 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp(
     modifier: Modifier = Modifier,
-    names: List<String> = List(10){"$it"}
+    names: List<String> = List(1000){"$it"}
 ) {
     // Check flag if button on OnboardingScreen function is pressed or not.
-    // shouldShowOnboarding's value is provided by the lambda function `remember`
-    var shouldShowOnboarding by remember { mutableStateOf(true) }
+    // shouldShowOnboardings value is provided by the lambda function `remember`
+    var shouldShowOnboarding by rememberSaveable { mutableStateOf(true) }
 
     // Check condition
     if(shouldShowOnboarding) {
@@ -79,8 +83,11 @@ fun MyListView(
 @Composable
 fun MyListBox(name: String, modifier: Modifier = Modifier) {
     // Check flag if button is pressed or not
-    val expanded = remember { mutableStateOf(false) }
-    val expandPadding = if(expanded.value) 48.dp else 0.dp
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val expandPadding by animateDpAsState(
+        targetValue = if(expanded) 48.dp else 0.dp,
+        label = "" // If we add animations when expanding, the app crashes
+    )
     Surface(
         color = MaterialTheme.colorScheme.primary,
         modifier = modifier.padding(vertical = 4.dp, horizontal = 8.dp)
@@ -90,12 +97,17 @@ fun MyListBox(name: String, modifier: Modifier = Modifier) {
                 .weight(1f)
                 .padding(bottom = expandPadding)) {
                 Text(text = "Hello ")
-                Text(text = name)
+                Text(
+                    text = name,
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontFamily = FontFamily.Monospace
+                )
             }
             ElevatedButton(
-                onClick = { expanded.value = !expanded.value }
+                onClick = { expanded = !expanded }
             ) {
-                Text(if (expanded.value) "Show less" else "Show more")
+                Text(if (expanded) "Show less" else "Show more")
             }
         }
     }
@@ -122,10 +134,34 @@ fun OnboardingScreen(modifier: Modifier = Modifier, onContinueClicked: () -> Uni
 }
 
 // Preview toolkit.
-@Preview(showBackground = true, widthDp = 320)
+@Preview(
+    showBackground = true,
+    widthDp = 320,
+    uiMode = UI_MODE_NIGHT_YES,
+    name = "GreetingPreviewDark"
+)
+@Preview(showBackground = true, widthDp = 320, name = "GreetingPreviewNormal")
 @Composable
 fun GreetingPreview() {
     TestAppTheme {
         MyApp()
     }
 }
+
+@Preview(
+    showBackground = true,
+    widthDp = 320,
+    uiMode = UI_MODE_NIGHT_YES,
+    name = "ListPreviewNight"
+)
+@Preview(showBackground = true, widthDp = 320, name = "ListPreviewNormal")
+@Composable
+fun ListPreview() {
+    val modifier : Modifier = Modifier
+    TestAppTheme {
+        MyListView(modifier = modifier)
+        // Passing a local modifier so that the
+        // compiler won't complain(plus it's a required parameter)
+    }
+}
+
