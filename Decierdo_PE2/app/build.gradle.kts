@@ -50,8 +50,8 @@ android {
 }
 
 dependencies {
-
-    implementation("io.coil-kt:coil:2.6.0")
+    implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.coil)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
