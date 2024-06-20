@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
 // desc: Common ancestor of all composable functions. Important check flags like
 //       shouldShowOnboarding variable reside here. The `Modifier` variable is first
 //       passed through here from the main class.
-// arguments: modifier: Modifier, names: List<String>
+// arguments: modifier - Modifier, names - List<String> w/ List of 1..10 as default
 @Composable
 fun MyApp(
     modifier: Modifier = Modifier,
