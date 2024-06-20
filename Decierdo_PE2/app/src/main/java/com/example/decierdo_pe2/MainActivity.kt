@@ -1,3 +1,9 @@
+/*
+* Name:     Christian Clyde G. Decierdo
+* Title:    PE 2
+* */
+
+
 package com.example.decierdo_pe2
 
 import android.os.Bundle
