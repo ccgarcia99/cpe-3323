@@ -27,13 +27,18 @@ enum class Gender {
     MALE, FEMALE, OTHER
 }
 
+enum class Location {
+    FRONT, BACK
+}
+
 // Superclass
 open class ShirtMod(
     protected var color: ShirtColor,
     protected var size: ShirtSize,
     protected var quote: ShirtQuote,
     protected var name: String,
-    protected var gender: Gender
+    protected var gender: Gender,
+    protected var location: Location
 )
 
 // Subclass inheriting from the superclass
@@ -43,22 +48,22 @@ class CustomShirt(
     quote: ShirtQuote,
     name: String,
     gender: Gender,
+    location: Location,
     var orderNumber: Int,
-    var location: String
-) : ShirtMod(color, size, quote, name, gender) {
+) : ShirtMod(color, size, quote, name, gender, location) {
 
     fun displayShirtDetails() {
         println("Order Number: $orderNumber")
         println("Shirt Color: $color")
         println("Shirt Size: $size")
-        println("Shirt Quote: ${quote.getQuote()}")
+        println("Shirt Quote: ${quote.index}")
         println("Name: $name")
         println("Gender: $gender")
         println("Location: $location")
     }
 
     fun getOrderSummary(): String {
-        return "$orderNumber, $name, $gender, $color, $size, ${quote.getQuote()}, $location"
+        return "| $orderNumber | ${name.padEnd(10)} | ${gender.toString().padEnd(6)} | ${color.toString().padEnd(5)} | ${size.toString().padEnd(6)} | ${quote.index}    | ${location.toString().padEnd(5)} |"
     }
 }
 
@@ -99,11 +104,11 @@ fun main() {
 
                 // Display quotes
                 println("Select a shirt quote:")
-                for (quote in ShirtQuote.entries) {
+                for (quote in ShirtQuote.values()) {
                     println("${quote.index}. ${quote.getQuote()}")
                 }
                 val quoteInput = scanner.nextInt()
-                val quote = ShirtQuote.entries.firstOrNull { it.index == quoteInput }
+                val quote = ShirtQuote.values().firstOrNull { it.index == quoteInput }
                 if (quote == null) {
                     println("Invalid quote selection. Please try again.")
                     continue
@@ -125,11 +130,17 @@ fun main() {
                 }
 
                 // Get location from user
-                println("Enter your location:")
-                val location = scanner.nextLine()
+                println("Select the quote location (FRONT, BACK):")
+                val locationInput = scanner.next().uppercase()
+                val location = try {
+                    Location.valueOf(locationInput)
+                } catch (e: IllegalArgumentException) {
+                    println("Invalid location selection. Please try again.")
+                    continue
+                }
 
                 // Create custom shirt with user inputs
-                val customShirt = CustomShirt(color, size, quote, name, gender, orderCounter++, location)
+                val customShirt = CustomShirt(color, size, quote, name, gender, location, orderCounter++)
                 orders.add(customShirt)
                 customShirt.displayShirtDetails()
 
@@ -138,10 +149,13 @@ fun main() {
             "B" -> {
                 println("Total Number of Orders: ${orders.size}")
                 println("Order Summary:")
-                println("Order Number, Name, Gender, Color, Size, Quote, Location")
+                println("+------------+------------+--------+-------+--------+-------+-------+")
+                println("| Order No.  | Name       | Gender | Color | Size   | Quote | Loc.  |")
+                println("+------------+------------+--------+-------+--------+-------+-------+")
                 for (order in orders) {
                     println(order.getOrderSummary())
                 }
+                println("+------------+------------+--------+-------+--------+-------+-------+")
             }
             "C" -> {
                 println("Exiting program.")

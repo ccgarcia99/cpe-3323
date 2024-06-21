@@ -2,8 +2,6 @@
 * Name:     Christian Clyde G. Decierdo
 * Title:    PE 2
 * */
-
-
 package com.example.decierdo_pe2
 
 import android.os.Bundle
@@ -35,7 +33,6 @@ import com.example.decierdo_pe2.ui.theme.Decierdo_PE2Theme
 import com.example.decierdo_pe2.ui.theme.myBlack
 
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -46,7 +43,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @Composable
 fun MyCard(modifier: Modifier = Modifier) {
@@ -75,23 +71,28 @@ fun MyCard(modifier: Modifier = Modifier) {
                 textAlign = TextAlign.Start,
                 style = MaterialTheme.typography.labelLarge
             )
-            Card(
-                modifier = modifier.border(
-                    width = 3.dp,
-                    color = myBlack,
-                    shape = RoundedCornerShape(4.dp)
-                    // explicitly declaring no rounded corners, just cuz
-                )
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.sample_image),
-                    contentDescription = "Congratulations",
-                )
-            }
+            MyImageBox(modifier)
             /*TODO: Implement the text body with the following:
 
             * */
         }
+    }
+}
+
+@Composable
+private fun MyImageBox(modifier: Modifier) {
+    Card(
+        modifier = modifier.border(
+            width = 3.dp,
+            color = myBlack,
+            shape = RoundedCornerShape(4.dp)
+            // explicitly declaring no rounded corners, just cuz
+        )
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.sample_image),
+            contentDescription = "Congratulations",
+        )
     }
 }
 

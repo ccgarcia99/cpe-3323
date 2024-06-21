@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:1-28:12
 MERGED from [androidx.activity:activity:1.9.0] /home/ccdecierdo/.gradle/caches/transforms-4/a5cbd769526771d723557451d62507e5/transformed/activity-1.9.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.9.0] /home/ccdecierdo/.gradle/caches/transforms-4/db7ec5d8c92fde2bc5b4bd730d224a40/transformed/activity-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material3:material3-android:1.2.1] /home/ccdecierdo/.gradle/caches/transforms-4/d0765998843ed232e4b2f2b9a547886e/transformed/material3-release/AndroidManifest.xml:17:1-22:12
@@ -56,18 +56,18 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ccdecierdo/.gradle/ca
 MERGED from [androidx.tracing:tracing:1.0.0] /home/ccdecierdo/.gradle/caches/transforms-4/ed2fe0a529f32134d062eef53813bfcf/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/ccdecierdo/.gradle/caches/transforms-4/30ee7bc1e3f5309be735f9ce0172d8cf/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
 	package
-		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:3:5-51
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:5:5-26:19
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:5:5-26:19
+ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:5:5-26:19
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:5:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /home/ccdecierdo/.gradle/caches/transforms-4/3216ab0062e72e59fd74b89cebc63560/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.6.8] /home/ccdecierdo/.gradle/caches/transforms-4/3216ab0062e72e59fd74b89cebc63560/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.6.8] /home/ccdecierdo/.gradle/caches/transforms-4/36fa7e09fdf02c6c5a37d5bd03e0489a/transformed/ui-test-manifest-1.6.8/AndroidManifest.xml:22:5-26:19
@@ -85,51 +85,51 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/ccdecierdo/
 MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ccdecierdo/.gradle/caches/transforms-4/bf99f1d84734bddbda4bebd4fcf349fe/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /home/ccdecierdo/.gradle/caches/transforms-4/bf99f1d84734bddbda4bebd4fcf349fe/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] /home/ccdecierdo/.gradle/caches/transforms-4/dbb100c4c00a055cc1e1ebab44d1cea2/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:10:9-41
 	android:fullBackupContent
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:8:9-54
 	android:roundIcon
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:11:9-54
 	tools:targetApi
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:14:9-29
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:14:9-29
 	android:icon
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:13:9-50
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:13:9-50
 	android:dataExtractionRules
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:7:9-65
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:7:9-65
 activity#com.example.decierdo_pe2.MainActivity
-ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:15:9-25:20
+ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:15:9-25:20
 	android:label
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:18:13-45
 	android:exported
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:17:13-36
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:17:13-36
 	android:theme
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:19:13-54
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:19:13-54
 	android:name
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:16:13-41
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:20:13-24:29
+ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:23:17-77
+ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml:23:27-74
+		ADDED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml:23:27-74
 uses-sdk
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
-INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
+INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 MERGED from [androidx.activity:activity:1.9.0] /home/ccdecierdo/.gradle/caches/transforms-4/a5cbd769526771d723557451d62507e5/transformed/activity-1.9.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.9.0] /home/ccdecierdo/.gradle/caches/transforms-4/a5cbd769526771d723557451d62507e5/transformed/activity-1.9.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity-ktx:1.9.0] /home/ccdecierdo/.gradle/caches/transforms-4/db7ec5d8c92fde2bc5b4bd730d224a40/transformed/activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
@@ -233,9 +233,9 @@ MERGED from [androidx.tracing:tracing:1.0.0] /home/ccdecierdo/.gradle/caches/tra
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/ccdecierdo/.gradle/caches/transforms-4/30ee7bc1e3f5309be735f9ce0172d8cf/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/ccdecierdo/.gradle/caches/transforms-4/30ee7bc1e3f5309be735f9ce0172d8cf/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
-		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/AndroidManifest.xml
 activity#androidx.compose.ui.tooling.PreviewActivity
 ADDED from [androidx.compose.ui:ui-tooling-android:1.6.8] /home/ccdecierdo/.gradle/caches/transforms-4/3216ab0062e72e59fd74b89cebc63560/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
 	android:exported

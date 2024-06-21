@@ -40,23 +40,6 @@
                     }
                 },
                 {
-                    "source": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "7,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "286,55,102,149,196,241,328",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "323,97,144,191,236,281,365"
-                    },
-                    "to": {
-                        "startLines": "5,10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "370,675,722,769,816,861,906",
-                        "endColumns": "41,46,46,46,44,44,41",
-                        "endOffsets": "407,717,764,811,856,901,943"
-                    }
-                },
-                {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/640430f41e417c222fdbf060a325300b/transformed/savedstate-1.2.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -146,23 +129,6 @@
                     }
                 },
                 {
-                    "source": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "56",
-                        "endColumns": "89",
-                        "endOffsets": "141"
-                    },
-                    "to": {
-                        "startLines": "216",
-                        "startColumns": "4",
-                        "startOffsets": "13636",
-                        "endColumns": "88",
-                        "endOffsets": "13720"
-                    }
-                },
-                {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/d0efe38ebe8d2abe97dde3b6883a7aef/transformed/ui-release/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,60,63",
@@ -199,23 +165,6 @@
                     }
                 },
                 {
-                    "source": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "49",
-                        "endOffsets": "61"
-                    },
-                    "to": {
-                        "startLines": "107",
-                        "startColumns": "4",
-                        "startOffsets": "6385",
-                        "endColumns": "49",
-                        "endOffsets": "6430"
-                    }
-                },
-                {
                     "source": "/home/ccdecierdo/.gradle/caches/transforms-4/00be7a4078196fa738edd364ed8bb4f7/transformed/customview-poolingcontainer-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -230,6 +179,40 @@
                         "startOffsets": "4880,5004",
                         "endColumns": "53,66",
                         "endOffsets": "4929,5066"
+                    }
+                },
+                {
+                    "source": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "7,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "286,55,102,149,196,241,328",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "323,97,144,191,236,281,365"
+                    },
+                    "to": {
+                        "startLines": "5,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "370,675,722,769,816,861,906",
+                        "endColumns": "41,46,46,46,44,44,41",
+                        "endOffsets": "407,717,764,811,856,901,943"
+                    }
+                },
+                {
+                    "source": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "49",
+                        "endOffsets": "61"
+                    },
+                    "to": {
+                        "startLines": "107",
+                        "startColumns": "4",
+                        "startOffsets": "6385",
+                        "endColumns": "49",
+                        "endOffsets": "6430"
                     }
                 },
                 {
@@ -264,6 +247,23 @@
                         "startOffsets": "6129",
                         "endColumns": "49",
                         "endOffsets": "6174"
+                    }
+                },
+                {
+                    "source": "/home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "56",
+                        "endColumns": "89",
+                        "endOffsets": "141"
+                    },
+                    "to": {
+                        "startLines": "216",
+                        "startColumns": "4",
+                        "startOffsets": "13636",
+                        "endColumns": "88",
+                        "endOffsets": "13720"
                     }
                 }
             ]

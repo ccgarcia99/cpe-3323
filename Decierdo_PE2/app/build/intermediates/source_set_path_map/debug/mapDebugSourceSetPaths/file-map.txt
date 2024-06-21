@@ -41,9 +41,9 @@ com.example.decierdo_pe2.app-annotation-experimental-1.4.0-39 /home/ccdecierdo/.
 com.example.decierdo_pe2.app-ui-text-google-fonts-1.6.8-40 /home/ccdecierdo/.gradle/caches/transforms-4/eb9c390f395f24ad7bedc2b0aa635443/transformed/ui-text-google-fonts-1.6.8/res
 com.example.decierdo_pe2.app-ui-tooling-preview-release-41 /home/ccdecierdo/.gradle/caches/transforms-4/ec13aa06939b0b7f0ff9d058d3baf8c0/transformed/ui-tooling-preview-release/res
 com.example.decierdo_pe2.app-material-release-42 /home/ccdecierdo/.gradle/caches/transforms-4/feb01b210a5f24061c04179ff930e006/transformed/material-release/res
-com.example.decierdo_pe2.app-resValues-43 /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/build/generated/res/resValues/debug
-com.example.decierdo_pe2.app-packageDebugResources-44 /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.example.decierdo_pe2.app-packageDebugResources-45 /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.example.decierdo_pe2.app-debug-46 /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/build/intermediates/merged_res/debug/mergeDebugResources
-com.example.decierdo_pe2.app-debug-47 /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/debug/res
-com.example.decierdo_pe2.app-main-48 /home/ccdecierdo/Desktop/workspace-repo/cpe-3233/Decierdo_PE2/app/src/main/res
+com.example.decierdo_pe2.app-resValues-43 /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/build/generated/res/resValues/debug
+com.example.decierdo_pe2.app-packageDebugResources-44 /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.decierdo_pe2.app-packageDebugResources-45 /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.decierdo_pe2.app-debug-46 /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.example.decierdo_pe2.app-debug-47 /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/debug/res
+com.example.decierdo_pe2.app-main-48 /home/ccdecierdo/Desktop/workspace-repo/cpe-3323/Decierdo_PE2/app/src/main/res

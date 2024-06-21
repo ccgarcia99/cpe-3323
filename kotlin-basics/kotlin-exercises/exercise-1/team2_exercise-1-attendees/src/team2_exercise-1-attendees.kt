@@ -1,3 +1,7 @@
+/*
+* Name: Christian Clyde G. Decierdo
+*
+* */
 fun main() {
     val attendees = mutableListOf<String>()
     println("Enter the names of attendees, one at a time. Enter an empty line to finish:")
