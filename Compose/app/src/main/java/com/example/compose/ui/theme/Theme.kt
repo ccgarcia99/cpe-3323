@@ -14,14 +14,18 @@ private val DarkColorScheme = darkColorScheme(
     primary = myOffWhite,
     onPrimary = myCarbonBlack,
     secondary = PurpleGrey40,
-    tertiary = Pink40
+    tertiary = Pink40,
+    background = myOffWhite,
+    onBackground = myCarbonBlack
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = myOffWhite,
     onPrimary = myCarbonBlack,
     secondary = PurpleGrey40,
-    tertiary = Pink40
+    tertiary = Pink40,
+    background = myOffWhite,
+    onBackground = myCarbonBlack
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -38,7 +42,7 @@ private val LightColorScheme = lightColorScheme(
 fun ComposeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false, // always turn this off if you want your themes to be reflected
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
