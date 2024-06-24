@@ -100,7 +100,16 @@ fun MyApp(modifier: Modifier = Modifier) {
             fontFamily = FontFamily.Serif,
             fontSize = 36.sp
         )
-        // Add image here
+        Text(
+            text = "We are happy to serve you!",
+            fontFamily = FontFamily.Serif,
+            fontWeight = FontWeight.ExtraLight,
+            fontSize = 16.sp,
+            modifier = modifier
+                .padding(
+                    vertical = 10.dp
+                )
+        )
     }
     Column(
         modifier = modifier
