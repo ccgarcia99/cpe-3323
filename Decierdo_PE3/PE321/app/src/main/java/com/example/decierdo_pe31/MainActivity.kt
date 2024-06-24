@@ -18,6 +18,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -75,9 +76,37 @@ fun MyApp(modifier: Modifier = Modifier) {
          6. Make UI adjustments
         * */
         BillField()
-
         RadioRowField()
+        RoundUp()
     }
+}
+
+@Composable
+fun RoundUp(modifier: Modifier = Modifier) {
+    var toggled by remember {
+        mutableStateOf(false)
+    }
+
+    Column {
+        Row(
+            modifier = modifier
+                .padding(bottom = 10.dp)
+                .padding(horizontal = 10.dp),
+            horizontalArrangement = Arrangement.Start,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Switch(
+                checked = toggled,
+                onCheckedChange = {toggled = it}
+            )
+            Spacer(modifier = modifier.width(8.dp))
+            Text(
+                text = "Round up tip",
+                fontFamily = FontFamily.Serif,
+            )
+        }
+    }
+
 }
 
 @Composable
