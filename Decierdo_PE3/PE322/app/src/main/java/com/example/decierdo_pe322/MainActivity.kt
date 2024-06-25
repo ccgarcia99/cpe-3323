@@ -73,7 +73,7 @@ fun RootComposable(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             ImageAndTextView(modifier = modifier)
-            Spacer(modifier = modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             Randomizer(modifier = modifier)
         }
     }
@@ -83,37 +83,36 @@ fun RootComposable(modifier: Modifier = Modifier) {
 fun ImageAndTextView(modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.Start
+        horizontalAlignment = Alignment.CenterHorizontally, // Center content horizontally
+        modifier = modifier.padding(16.dp) // Add padding to the Column
     ) {
-        Spacer(modifier = modifier.height(20.dp))
-        // TODO: Wrap Image in a box shadow
         Image(
-            painter = (painterResource(id = R.drawable._681495279040607)),
+            painter = painterResource(id = R.drawable._681495279040607),
             contentDescription = null,
-            modifier = modifier
-                .height(140.dp)
-                .width(250.dp)
-                .align(Alignment.CenterHorizontally)
+            modifier = Modifier
+                .height(200.dp)
+                .width(300.dp)
+                .align(Alignment.CenterHorizontally) // Center the image horizontally
+                .padding(bottom = 25.dp) // Add padding below the image
         )
-        Spacer(modifier = modifier.height(25.dp))
         Text(
             text = """
             "This is a sample multiline text
-             quote. You can put anything here to your
-             hearts desire."
+            quote. You can put anything here to your
+            hearts desire."
             """.trimIndent(),
             fontStyle = FontStyle.Italic,
-            textAlign = TextAlign.Left,
-            modifier = modifier.align(Alignment.CenterHorizontally)
+            textAlign = TextAlign.Left, // Center the text
+            modifier = Modifier.align(Alignment.CenterHorizontally)
         )
-        Spacer(modifier = modifier.height(25.dp))
         Text(
             text = "- J. Author",
             fontWeight = FontWeight.Light,
-            modifier = modifier.align(Alignment.End)
+            modifier = Modifier.align(Alignment.End).padding(top = 8.dp) // Add padding above the author text
         )
     }
 }
+
 
 @Composable
 fun Randomizer(modifier: Modifier = Modifier) {
