@@ -145,7 +145,7 @@ fun RootComposable(
                         .padding(20.dp),
                     textAlign = TextAlign.Left, // Align the text to the left
                     fontSize = 18.sp,
-                    fontStyle = FontStyle.Italic,
+                    fontStyle = FontStyle.Normal,
                     fontFamily = FontFamily.Serif
                 )
                 Text(
