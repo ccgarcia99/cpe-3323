@@ -232,9 +232,6 @@ fun RoundUp(
     }
 }
 
-
-
-
 @Composable
 fun RadioRowField(
     modifier: Modifier = Modifier,
@@ -283,7 +280,6 @@ fun RadioRowField(
     }
 }
 
-
 @Composable
 fun BillField(
     modifier: Modifier = Modifier,
@@ -302,7 +298,7 @@ fun BillField(
         },
         singleLine = true,
         keyboardOptions = KeyboardOptions(
-            keyboardType = KeyboardType.Number
+            keyboardType = KeyboardType.Decimal
         ),
         label = {
             Text(

@@ -1,15 +1,74 @@
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
 local.properties
+*.hprof
+
+# OS-specific
+# Mac OS X
+.DS_Store
+
+# Windows
+Thumbs.db
+*.bak
+*.tmp
+# Windows PowerShell history file
+*.ps1
+*.psm1
+
+# Linux
+*~
+
+# Logs
+*.log
+
+# Generated files
+*.class
+*.dex
+*.apk
+*.ap_
+*.keystore
+*.jks
+
+# Java template files
+*.jar
+*.war
+*.ear
+
+# Unit test reports
+/test-report
+/test-result
+/test-output
+
+# Coverage reports
+/coverage-reports
+/coverage-result
+/coverage-output
+
+# IntelliJ
+*.ipr
+*.iws
+*.idea/
+
+# Exclude all files in the root project directory except specific ones
+/*
+
+# Include specific files and directories in the root project directory
+!/.gitignore
+!/gradlew
+!/gradlew.bat
+!/gradle/
+!/settings.gradle
+!/build.gradle
+!/app/
+
+# Exclude build directories in subdirectories
+**/build/
+**/local.properties
+**/.idea/
+**/.gradle/
