@@ -1,3 +1,10 @@
+/*
+* Name: Christian Clyde G. Decierdo
+* File: Decierdo_PE3.2.2 - Quote of the Day
+* Desc: An application that renders an image and a string of text on random every time that a
+*       button is pressed. Made with Jetpack Compose framework
+* */
+
 package com.example.decierdo_pe322
 
 import android.os.Bundle
@@ -12,6 +19,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.decierdo_pe322.ui.theme.Decierdo_PE322Theme
+import com.example.decierdo_pe322.ui.theme.Presets
 import com.example.decierdo_pe322.ui.theme.WinterBlueLightPrimaryContainer
 
 data class Quote(val text: String, val author: String)
@@ -86,94 +95,107 @@ fun RootComposable(
     // variable declarations with our data class property
     var currentQuote by remember { mutableStateOf(quotes.random()) }
     var previousQuote by remember { mutableStateOf<Quote?>(null)}
-
+    // images
     var currentImg by remember { mutableIntStateOf(inspirationalImages.random()) }
     var prevImg by remember { mutableStateOf<Int?>(null) }
 
-    Surface(
-        modifier = modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
+    // Object variable for presets
+    val scaffoldPreset = Presets()
+
+    Scaffold(
+        topBar = {
+            scaffoldPreset.topAppBarPresets("Quote of the Day")
+        }
     ) {
-        ConstraintLayout(
+        innerPadding ->
+        Surface(
             modifier = modifier
                 .fillMaxSize()
-                .padding(36.dp) // Added padding to ensure margins
-        ) {
-            // Create reference values for our composables
-            val (image, quoteText, authorText, button) = createRefs()
-
-            Image(
-                painter = painterResource(id = currentImg),
-                contentDescription = null,
+                .padding(innerPadding),
+            color = MaterialTheme.colorScheme.background
+        ) { // Constraining UI elements like in the Views model programmatically
+            ConstraintLayout(
                 modifier = modifier
-                    .fillMaxWidth()
-                    .aspectRatio(16f / 9f)
-                    .constrainAs(image) {
-                        top.linkTo(parent.top, margin = 60.dp)
-                        start.linkTo(parent.start)
-                        end.linkTo(parent.end)
-                    }
-            )
-            Text(
-                text = currentQuote.text,
-                modifier = modifier
-                    .constrainAs(quoteText) {
-                        top.linkTo(image.bottom, margin = 16.dp)
-                        start.linkTo(parent.start)
-                        end.linkTo(parent.end)
-                    }
-                    .padding(20.dp),
-                textAlign = TextAlign.Left, // Align the text to the left
-                fontSize = 18.sp,
-                fontStyle = FontStyle.Italic,
-                fontFamily = FontFamily.Serif
-            )
-            Text(
-                text = "- ${currentQuote.author}",
-                modifier = modifier
-                    .constrainAs(authorText) {
-                        top.linkTo(quoteText.bottom, margin = 8.dp)
-                        end.linkTo(parent.end, margin = 20.dp)
-                    },
-                fontSize = 16.sp,
-                fontWeight = FontWeight.Light
-            )
-            OutlinedButton(
-                modifier = modifier
-                    .fillMaxWidth()
-                    .constrainAs(button) {
-                        bottom.linkTo(parent.bottom, margin = 40.dp)
-                        start.linkTo(parent.start, margin = 20.dp)
-                        end.linkTo(parent.end, margin = 20.dp)
-                    },
-                onClick = {
-                    var newQuote: Quote
-                    var newImg: Int
-                    do {
-                        newQuote = quotes.random()
-                    } while (newQuote == currentQuote)
-                    do{
-                        newImg = inspirationalImages.random()
-                    }while (newImg == currentImg)
-                    previousQuote = currentQuote
-                    currentQuote = newQuote
-
-                    prevImg = currentImg
-                    currentImg = newImg
-                },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = WinterBlueLightPrimaryContainer
-                )
+                    .fillMaxSize()
+                    .padding(36.dp) // Added padding to ensure margins
             ) {
-                Text(
-                    text = "Get New Quote",
-                    color = Color.Black
+                // Create reference values for our composables
+                val (image, quoteText, authorText, button) = createRefs()
+
+                Image(
+                    painter = painterResource(id = currentImg),
+                    contentDescription = null,
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .aspectRatio(16f / 9f)  // maintain image size
+                        .constrainAs(image) {
+                            top.linkTo(parent.top, margin = 60.dp)
+                            start.linkTo(parent.start)
+                            end.linkTo(parent.end)
+                        }
                 )
+                Text(
+                    text = currentQuote.text,
+                    modifier = modifier
+                        .constrainAs(quoteText) {
+                            top.linkTo(image.bottom, margin = 16.dp)
+                            start.linkTo(parent.start)
+                            end.linkTo(parent.end)
+                        }
+                        .padding(20.dp),
+                    textAlign = TextAlign.Left, // Align the text to the left
+                    fontSize = 18.sp,
+                    fontStyle = FontStyle.Italic,
+                    fontFamily = FontFamily.Serif
+                )
+                Text(
+                    text = "- ${currentQuote.author}",
+                    modifier = modifier
+                        .constrainAs(authorText) {
+                            top.linkTo(quoteText.bottom, margin = 8.dp)
+                            end.linkTo(parent.end, margin = 20.dp)
+                        },
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Light
+                )
+                OutlinedButton(
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .constrainAs(button) {
+                            bottom.linkTo(parent.bottom, margin = 40.dp)
+                            start.linkTo(parent.start, margin = 20.dp)
+                            end.linkTo(parent.end, margin = 20.dp)
+                        },
+                    onClick = {
+                        var newQuote: Quote
+                        var newImg: Int
+                        do {
+                            newQuote = quotes.random()
+                        } while (newQuote == currentQuote)
+                        do{
+                            newImg = inspirationalImages.random()
+                        }while (newImg == currentImg)
+                        previousQuote = currentQuote
+                        currentQuote = newQuote
+
+                        prevImg = currentImg
+                        currentImg = newImg
+                    },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = WinterBlueLightPrimaryContainer
+                    )
+                ) {
+                    Text(
+                        text = "Get New Quote",
+                        color = Color.Black
+                    )
+                }
             }
         }
     }
 }
 
+// Preview toolkit
 @Preview(
     showSystemUi = true,
     showBackground = true
@@ -181,7 +203,10 @@ fun RootComposable(
 @Composable
 fun Preview() {
     val modifier = Modifier
-    Decierdo_PE322Theme {
+    Decierdo_PE322Theme(
+        dynamicColor = false,
+        darkTheme = false
+    ) {
         RootComposable(modifier)
     }
 }

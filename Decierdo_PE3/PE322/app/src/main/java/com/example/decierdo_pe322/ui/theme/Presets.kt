@@ -1,3 +1,9 @@
+/*
+* Name: Christian Clyde G. Decierdo
+* File: Decierdo_PE3.2.2 - Quote of the Day / Presets
+* Desc: Contains custom defined presets for the application.
+* */
+
 package com.example.decierdo_pe322.ui.theme
 
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -24,7 +30,7 @@ class Presets{
             },
             colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = MaterialTheme.colorScheme.background,
-                titleContentColor = MaterialTheme.colorScheme.primary
+                titleContentColor = MaterialTheme.colorScheme.onPrimary
             )
         )
     }
