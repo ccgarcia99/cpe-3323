@@ -11,22 +11,29 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+// Custom Winter Blue Theme Colors
+private val WinterBlueDarkColorScheme = darkColorScheme(
+    primary = WinterBlueDarkPrimary,
+    onPrimary = WinterBlueDarkOnPrimary,
+    primaryContainer = WinterBlueDarkPrimaryContainer,
+    secondary = WinterBlueDarkSecondary,
+    onSecondary = WinterBlueDarkOnSecondary,
+    background = WinterBlueDarkBackground,
+    onBackground = WinterBlueDarkOnBackground,
+    surface = WinterBlueDarkSurface,
+    onSurface = WinterBlueDarkOnSurface
 )
 
-private val LightColorScheme = lightColorScheme(
-    background = Color(0xFFeeede7),
-    surface = Color(0xFFe7d2cc),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    primaryContainer = Color(0xFFb9b7bd),
-    primary = Color.Black
+private val WinterBlueLightColorScheme = lightColorScheme(
+    primary = WinterBlueLightPrimary,
+    onPrimary = WinterBlueLightOnPrimary,
+    primaryContainer = WinterBlueLightPrimaryContainer,
+    secondary = WinterBlueLightSecondary,
+    onSecondary = WinterBlueLightOnSecondary,
+    background = WinterBlueLightBackground,
+    onBackground = WinterBlueLightOnBackground,
+    surface = WinterBlueLightSurface,
+    onSurface = WinterBlueLightOnSurface
 )
 
 @Composable
@@ -41,9 +48,8 @@ fun Decierdo_PE322Theme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+        darkTheme -> WinterBlueDarkColorScheme
+        else -> WinterBlueLightColorScheme
     }
 
     MaterialTheme(
