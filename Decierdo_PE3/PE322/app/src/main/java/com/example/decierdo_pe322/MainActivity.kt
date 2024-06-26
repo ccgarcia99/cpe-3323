@@ -16,6 +16,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -48,6 +49,19 @@ val quotes = listOf(
     Quote("Don’t watch the clock; do what it does. Keep going.", "Sam Levenson")
 )
 
+val inspirationalImages = listOf(
+    R.drawable._681495279040607,
+    R.drawable._684267427813678,
+    R.drawable._685362396481634,
+    R.drawable._685988578720572,
+    R.drawable._702307028974408,
+    R.drawable._708107138806618,
+    R.drawable._708470532817406,
+    R.drawable._719033471116888,
+    R.drawable._718281453500036,
+    R.drawable._704370147666751
+)
+
 class MainActivity : ComponentActivity() {
     private val modifier = Modifier
 
@@ -73,6 +87,9 @@ fun RootComposable(
     var currentQuote by remember { mutableStateOf(quotes.random()) }
     var previousQuote by remember { mutableStateOf<Quote?>(null)}
 
+    var currentImg by remember { mutableIntStateOf(inspirationalImages.random()) }
+    var prevImg by remember { mutableStateOf<Int?>(null) }
+
     Surface(
         modifier = modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -86,7 +103,7 @@ fun RootComposable(
             val (image, quoteText, authorText, button) = createRefs()
 
             Image(
-                painter = painterResource(id = R.drawable._684267427813678),
+                painter = painterResource(id = currentImg),
                 contentDescription = null,
                 modifier = modifier
                     .fillMaxWidth()
@@ -131,11 +148,18 @@ fun RootComposable(
                     },
                 onClick = {
                     var newQuote: Quote
+                    var newImg: Int
                     do {
                         newQuote = quotes.random()
                     } while (newQuote == currentQuote)
+                    do{
+                        newImg = inspirationalImages.random()
+                    }while (newImg == currentImg)
                     previousQuote = currentQuote
                     currentQuote = newQuote
+
+                    prevImg = currentImg
+                    currentImg = newImg
                 },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = WinterBlueLightPrimaryContainer
