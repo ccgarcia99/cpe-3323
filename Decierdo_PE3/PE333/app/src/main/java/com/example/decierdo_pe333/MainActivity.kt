@@ -40,13 +40,6 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.decierdo_pe333.ui.theme.Decierdo_PE333Theme
 import kotlin.math.pow
 
-val bmiRangeImg = arrayOf(
-    R.drawable.underweight,
-    R.drawable.normal,
-    R.drawable.overweight,
-    R.drawable.obese
-)
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val modifier = Modifier
@@ -102,15 +95,18 @@ fun RootComposable(modifier: Modifier = Modifier) {
                                 end.linkTo(parent.end, margin = 20.dp)
                             }
                     )
-                    BMIReference(
-                        modifier = Modifier
-                            .aspectRatio(16 / 9f)
-                            .constrainAs(imgBMIRef) {
-                                top.linkTo(flvrTextRef.bottom, margin = 20.dp)
-                                start.linkTo(parent.start, margin = 20.dp)
-                                end.linkTo(parent.end, margin = 20.dp)
-                            }
-                    )
+                    bMI?.let {
+                        BMIReference(
+                            bmiIn = it,
+                            modifier = Modifier
+                                .aspectRatio(16 / 9f)
+                                .constrainAs(imgBMIRef) {
+                                    top.linkTo(flvrTextRef.bottom, margin = 20.dp)
+                                    start.linkTo(parent.start, margin = 20.dp)
+                                    end.linkTo(parent.end, margin = 20.dp)
+                                }
+                        )
+                    }
                     // TODO: ADD Text output
                     bMI?.let {
                         OutputText(
@@ -180,9 +176,20 @@ fun FlavorText(modifier: Modifier) {
 }
 
 @Composable
-fun BMIReference(modifier: Modifier) {
+fun BMIReference(
+    bmiIn: Float,
+    modifier: Modifier) {
+
+    val bmiCategory = when {
+        bmiIn < 10.0 -> R.drawable.ic_launcher_background
+        bmiIn < 18.5 -> R.drawable.underweight
+        bmiIn < 24.9 -> R.drawable.normal
+        bmiIn < 29.9 -> R.drawable.overweight
+        else -> R.drawable.obese
+    }
+
     Image(
-        painter = painterResource(id = R.drawable.ic_launcher_background),
+        painter = painterResource(id = bmiCategory),
         contentDescription = null,
         modifier = modifier
     )
@@ -200,25 +207,38 @@ fun OutputText(
         3 to "Overweight",
         4 to "Obese"
     )
+    if (bmiValue == 0f) {
+        Text(
+            text = """
+            Enter your height and
+            weight below!
+            """.trimIndent(),
+            modifier = modifier,
+            textAlign = TextAlign.Center,
+            fontSize = 28.sp,
+            lineHeight = 35.sp
+        )
+    }else {
+        val bmiCategory = when {
+            bmiValue == null -> "Invalid BMI"
+            bmiValue < 10.0 -> ""
+            bmiValue < 18.5 -> bmiRange[1] ?: "Underweight"
+            bmiValue < 24.9 -> bmiRange[2] ?: "Normal"
+            bmiValue < 29.9 -> bmiRange[3] ?: "Overweight"
+            else -> bmiRange[4] ?: "Obese"
+        }
 
-    val bmiCategory = when {
-        bmiValue == null -> "Invalid BMI"
-        bmiValue < 18.5 -> bmiRange[1] ?: "Underweight"
-        bmiValue < 24.9 -> bmiRange[2] ?: "Normal"
-        bmiValue < 29.9 -> bmiRange[3] ?: "Overweight"
-        else -> bmiRange[4] ?: "Obese"
-    }
-
-    Text(
-        text = """
+        Text(
+            text = """
             Your BMI: $bmiOut
             $bmiCategory
         """.trimIndent(),
-        modifier = modifier,
-        textAlign = TextAlign.Center,
-        fontSize = 28.sp,
-        lineHeight = 35.sp
-    )
+            modifier = modifier,
+            textAlign = TextAlign.Center,
+            fontSize = 28.sp,
+            lineHeight = 35.sp
+        )
+    }
 }
 
 @Composable
