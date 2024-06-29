@@ -1,0 +1,31 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx
+local.properties
+
+# Generated files (if applicable)
+/generated/
+
+# Logs and caches (if needed)
+*.log
+*.cache
+
+# OS-specific files (Windows)
+Thumbs.db
+ehthumbs.db
+
+# OS-specific files (Linux)
+*.swp
+
+# Exclude any sensitive or environment-specific files not mentioned above
