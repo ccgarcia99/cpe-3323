@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">decierdoCh_PE3.22</string>
+    <string name="str">null</string>
+    <string name="get_new_quote">Get new quote!</string>
+    <string name="desc">This is a sample description</string>
+    <string name="anonymous">- Anonymous</string>
+    <string name="quotable">This is just a quotable remark</string>
 </resources>
