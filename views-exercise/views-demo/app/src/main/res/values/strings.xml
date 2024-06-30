@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Views Demo</string>
+    <string name="click_me">Click Me!</string>
+    <string name="base">Base:</string>
+    <string name="bill">Bill:</string>
+    <string name="enter_bill">Enter Bill</string>
+    <string name="tip_cost">Tip Cost:</string>
+    <string name="textview">TextView</string>
+    <string name="php_0_00">PHP 0.00</string>
+    <string name="good_10">Good(10%)</string>
+    <string name="great_15">Great(15%)</string>
+    <string name="amazing_25">Amazing(25)</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="button">Button</string>
+    <string name="base_S">Base:</string>
+    <string name="calculate_tip">Calculate Tip!</string>
+    <string name="total">Total:</string>
 </resources>
