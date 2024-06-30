@@ -1,0 +1,58 @@
+# IntelliJ IDEA module files
+*.iml
+
+# Gradle build directory
+.gradle/
+
+# Local properties file for SDK location
+/local.properties
+
+# IntelliJ IDEA cache directory
+/.idea/caches/
+
+# IntelliJ IDEA libraries directory
+/.idea/libraries/
+
+# IntelliJ IDEA project files
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# macOS system file
+.DS_Store
+
+# Android build directory
+/build/
+
+# Directory for screen captures
+/captures/
+
+# External native build directory
+.externalNativeBuild/
+
+# C++ related files and directories
+.cxx
+
+# Local properties file for SDK location (duplicate, already mentioned above)
+local.properties
+
+# Generated files directory (if applicable to your project)
+/generated/
+
+# Log files (if needed)
+*.log
+
+# Cache files (if needed)
+*.cache
+
+# Windows system file
+Thumbs.db
+
+# Windows system file
+ehthumbs.db
+
+# Linux swap files
+*.swp
+
+# Exclude any sensitive or environment-specific files not covered above
