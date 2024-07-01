@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mvcpractice"
         tools:targetApi="31">
-        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".FragmentsSample"/>
+        <activity android:name=".ProfileActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

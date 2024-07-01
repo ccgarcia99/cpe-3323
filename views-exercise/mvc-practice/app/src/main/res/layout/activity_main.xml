@@ -65,7 +65,7 @@
         android:id="@+id/tvFlavorText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="26dp"
         android:text="@string/sample_data_form"
         android:textAlignment="center"
         android:textSize="28sp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Address"
+        android:id="@+id/etAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -99,14 +99,12 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="56dp"
         android:backgroundTint="#514E4E"
         android:text="@string/apply"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnViewProfile"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address"
+        app:layout_constraintTop_toBottomOf="@+id/etAddress"
         tools:ignore="VisualLintButtonSize" />
 
     <Button
@@ -126,5 +124,20 @@
         app:layout_constraintTop_toTopOf="@+id/btnApply"
         app:strokeColor="#121111"
         tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/btnFrags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/frags"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnApply" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

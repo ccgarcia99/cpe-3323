@@ -10,4 +10,6 @@
     <string name="todo">TODO</string>
     <string name="welcome">Welcome to the Second Activity</string>
     <string name="go_back">Go Back</string>
+    <string name="frags">Go to Fragments Activity</string>
+    <string name="profile_view">Profile View</string>
 </resources>
