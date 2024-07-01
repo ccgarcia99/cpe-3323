@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">mvc-practice</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="occ">Occupation</string>
+    <string name="sample_data_form">Sample Data Form</string>
+    <string name="address">Address</string>
+    <string name="apply">Apply</string>
+    <string name="view_profile">View Profile</string>
+</resources>
