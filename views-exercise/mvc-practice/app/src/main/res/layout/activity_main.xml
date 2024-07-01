@@ -93,7 +93,7 @@
         tools:ignore="VisualLintTextFieldSize" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnApply"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -103,14 +103,14 @@
         android:backgroundTint="#514E4E"
         android:text="@string/apply"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/btnViewProfile"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Address"
         tools:ignore="VisualLintButtonSize" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnViewProfile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -119,11 +119,11 @@
         android:hapticFeedbackEnabled="true"
         android:text="@string/view_profile"
         android:textColor="#141312"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btnApply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btnApply"
+        app:layout_constraintTop_toTopOf="@+id/btnApply"
         app:strokeColor="#121111"
         tools:ignore="VisualLintButtonSize" />
 

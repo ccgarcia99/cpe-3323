@@ -7,4 +7,7 @@
     <string name="address">Address</string>
     <string name="apply">Apply</string>
     <string name="view_profile">View Profile</string>
+    <string name="todo">TODO</string>
+    <string name="welcome">Welcome to the Second Activity</string>
+    <string name="go_back">Go Back</string>
 </resources>
