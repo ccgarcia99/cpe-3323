@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">decierdoCh_PE3.23</string>
+    <string name="btn_flav">Calculate!</string>
+    <string name="tv_flav">BMI Calculator</string>
+
+
+    // Array declaration
+    <string name="underw">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overw">Overweight</string>
+    <string name="obese">Obese</string>
+    <string name="enter_height_in_cm">Enter height(in cm)</string>
+    <string name="button">Button</string>
+    <string name="enter_weight_in_kg">Enter weight(in kg)</string>
+    <string name="nil">null</string>
+    <string name="todo">TODO</string>
+
+    <string-array name="evaluation">
+        <item>@string/underw</item>
+        <item>@string/normal</item>
+        <item>@string/overw</item>
+        <item>@string/obese</item>
+    </string-array>
+
 </resources>
