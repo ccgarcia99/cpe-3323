@@ -1,4 +1,4 @@
-package com.example.decierdo_pe333
+package com.example.decierdo_pe323
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -37,6 +37,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.decierdo_pe333.R
 import com.example.decierdo_pe333.ui.theme.Decierdo_PE333Theme
 import kotlin.math.pow
 
