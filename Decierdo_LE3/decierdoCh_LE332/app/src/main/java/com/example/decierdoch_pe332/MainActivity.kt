@@ -13,6 +13,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
@@ -135,13 +136,13 @@ fun SideDishCard(modifier: Modifier, imageId: Int, side: Sides) {
     val spacing = LocalSpacing.current
     val myTextSize = LocalTextSize.current
     Box(
-        modifier = modifier.fillMaxSize(0.8f)
+        modifier = modifier.wrapContentSize(Alignment.Center)
     ) {
         Surface(
             color = MaterialTheme.colorScheme.secondaryContainer,
             modifier = modifier
                 .wrapContentHeight()
-                .fillMaxWidth(),
+                .fillMaxWidth(0.9f),
             shape = RoundedCornerShape(20.dp),
             shadowElevation = 8.dp
         ) {
@@ -160,7 +161,8 @@ fun SideDishCard(modifier: Modifier, imageId: Int, side: Sides) {
                         painter = painterResource(id = imageId),
                         contentDescription = null,
                         modifier = Modifier
-                            .fillMaxSize()
+                            .fillMaxSize(),
+                        contentScale = ContentScale.Crop
                     )
                 }
                 Text(
@@ -223,7 +225,6 @@ fun ChipOptions(modifier: Modifier = Modifier, meal: Meal, onClick: () -> Unit, 
 }
 
 @Preview(
-    showSystemUi = true,
     showBackground = true
 )
 @Composable
