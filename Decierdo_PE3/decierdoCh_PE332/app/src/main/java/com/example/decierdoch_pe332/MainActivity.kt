@@ -4,32 +4,16 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Done
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -40,6 +24,15 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.example.decierdoch_pe332.ui.theme.DecierdoCh_PE332Theme
 import com.example.decierdoch_pe332.ui.theme.LocalSpacing
 import com.example.decierdoch_pe332.ui.theme.LocalTextSize
+
+data class Meal(val name: String, val side: Sides)
+data class Sides(val name: String, val description: String)
+
+val mealsList = listOf(
+    Meal("Burger", Sides("Fries", "A plate of crispy fries with a side of ketchup")),
+    Meal("Pasta", Sides("Bread-sticks", "A plate of bread-sticks basted with butter garlic and garnished with chives")),
+    Meal("Orange Chicken", Sides("Vegetable stir-fry", "A medley of vegetables seasoned with oriental herbs and spices"))
+)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +59,8 @@ fun RootComposable(modifier: Modifier = Modifier) {
                 color = MaterialTheme.colorScheme.surface
             ) {
                 ConstraintLayout {
-                    val (labelRef, subHeadingRef, chipGroup) = createRefs()
+                    val (labelRef, subHeadingRef, chipGroup, cardRef) = createRefs()
+
                     TopLabel(
                         modifier = modifier
                             .fillMaxWidth()
@@ -77,8 +71,8 @@ fun RootComposable(modifier: Modifier = Modifier) {
                                 end.linkTo(parent.end, margin = spacing.marginRegularSpacing)
                             },
                         customTextSize = myTextSize.extraLargeHeaderText
-
                     )
+
                     SubHeading(
                         modifier = modifier
                             .fillMaxWidth()
@@ -90,6 +84,9 @@ fun RootComposable(modifier: Modifier = Modifier) {
                             },
                         customTextSize = myTextSize.smallHeaderText
                     )
+
+                    var selectedMeal by remember { mutableStateOf(mealsList.first()) }
+
                     Row(
                         modifier = modifier
                             .fillMaxWidth()
@@ -100,44 +97,83 @@ fun RootComposable(modifier: Modifier = Modifier) {
                             },
                         horizontalArrangement = Arrangement.Center
                     ) {
-                        ChipOptions(
-                            label = "Burger",
-                            modifier = Modifier.padding(horizontal = 8.dp)
-                        ) {}
-                        ChipOptions(
-                            label = "Pasta",
-                            modifier = Modifier.padding(horizontal = 8.dp)
-                        ) {}
-                        ChipOptions(
-                            label = "Orange Chicken",
-                            modifier = Modifier.padding(horizontal = 8.dp)
-                        ) {}
+                        mealsList.forEach { meal ->
+                            ChipOptions(
+                                meal = meal,
+                                modifier = Modifier.padding(horizontal = 8.dp),
+                                onClick = { selectedMeal = meal },
+                                isSelected = selectedMeal == meal
+                            )
+                        }
                     }
+
+                    val imageId = when (selectedMeal.side.name) {
+                        "Fries" -> R.drawable.fries
+                        "Bread-sticks" -> R.drawable.breadsticks
+                        "Vegetable stir-fry" -> R.drawable.vegetable_stir_fry
+                        else -> R.drawable.fries
+                    }
+
+                    SideDishCard(
+                        modifier = modifier
+                            .constrainAs(cardRef) {
+                                top.linkTo(chipGroup.bottom, margin = spacing.smallSpacing)
+                                start.linkTo(parent.start, margin = spacing.marginRegularSpacing)
+                                end.linkTo(parent.end, margin = spacing.marginRegularSpacing)
+                            },
+                        imageId = imageId,
+                        side = selectedMeal.side
+                    )
                 }
             }
         }
     }
 }
-@Composable
-fun CardListView() {
-    LazyColumn {
-
-    }
-}
 
 @Composable
-fun SideDishCard(modifier: Modifier, imageId: Int) {
+fun SideDishCard(modifier: Modifier, imageId: Int, side: Sides) {
+    val spacing = LocalSpacing.current
+    val myTextSize = LocalTextSize.current
     Box(
-        modifier = modifier
-            .width(320.dp)
-            .height(150.dp),
+        modifier = modifier.fillMaxSize(0.8f)
     ) {
         Surface(
             color = MaterialTheme.colorScheme.secondaryContainer,
-            modifier = modifier.fillMaxSize(),
-            shape = RoundedCornerShape(20.dp)
+            modifier = modifier
+                .wrapContentHeight()
+                .fillMaxWidth(),
+            shape = RoundedCornerShape(20.dp),
+            shadowElevation = 8.dp
         ) {
-
+            Column(
+                verticalArrangement = Arrangement.Top,
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = modifier.padding(top = spacing.smallSpacing)
+            ) {
+                Card(
+                    shape = RoundedCornerShape(20.dp),
+                    modifier = Modifier
+                        .fillMaxWidth(0.92f)
+                        .aspectRatio(16f / 9f)
+                ) {
+                    Image(
+                        painter = painterResource(id = imageId),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .fillMaxSize()
+                    )
+                }
+                Text(
+                    text = side.name,
+                    fontSize = myTextSize.mediumTextSize,
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = modifier.padding(top = spacing.mediumSpacing, bottom = spacing.mediumSpacing)
+                )
+                Text(
+                    text = side.description,
+                    modifier = modifier.padding(all = spacing.mediumSpacing)
+                )
+            }
         }
     }
 }
@@ -168,12 +204,11 @@ fun SubHeading(modifier: Modifier, customTextSize: TextUnit) {
 }
 
 @Composable
-fun ChipOptions(modifier: Modifier = Modifier, label: String, onClick: () -> Unit) {
-    var isSelected by remember { mutableStateOf(false) }
+fun ChipOptions(modifier: Modifier = Modifier, meal: Meal, onClick: () -> Unit, isSelected: Boolean) {
     FilterChip(
         selected = isSelected,
-        onClick = { isSelected = !isSelected },
-        label = { Text(text = label, maxLines = 1) },
+        onClick = onClick,
+        label = { Text(text = meal.name, maxLines = 1) },
         modifier = modifier,
         leadingIcon = {
             if (isSelected) {
@@ -185,6 +220,17 @@ fun ChipOptions(modifier: Modifier = Modifier, label: String, onClick: () -> Uni
             }
         }
     )
+}
+
+@Preview(
+    showSystemUi = true,
+    showBackground = true
+)
+@Composable
+fun ComponentPreview() {
+    DecierdoCh_PE332Theme {
+        SideDishCard(modifier = Modifier, imageId = R.drawable.fries, side = mealsList[0].side)
+    }
 }
 
 @Preview(

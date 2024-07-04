@@ -26,7 +26,7 @@ val FinalColorWay: ButtonColors @Composable get() = ButtonDefaults.elevatedButto
 
 @Composable
 fun TestFun(
-    colorways: ButtonColors = FinalColorWay // test
+    colorways: ButtonColors = DeleteColorWay // test
 ){
     ElevatedButton(
         onClick = { /*TODO*/ },

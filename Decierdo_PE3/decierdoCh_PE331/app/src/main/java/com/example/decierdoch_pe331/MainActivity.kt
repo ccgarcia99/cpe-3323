@@ -178,7 +178,8 @@ fun CustomWordCard(
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.secondary,
-            shape = RoundedCornerShape(15.dp)
+            shape = RoundedCornerShape(15.dp),
+            shadowElevation = 8.dp
         ) {
             Box(
                 modifier = Modifier.fillMaxSize(),
