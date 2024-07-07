@@ -1,8 +1,6 @@
 package com.example.decierdoch_le341.controller
 
-sealed class Screen(
-    val route : String
-) {
+sealed class Screen(val route: String) {
     data object Home : Screen("home")
     data object AgeGroup : Screen("ageGroup")
     data object GiftSelection : Screen("giftSelection")

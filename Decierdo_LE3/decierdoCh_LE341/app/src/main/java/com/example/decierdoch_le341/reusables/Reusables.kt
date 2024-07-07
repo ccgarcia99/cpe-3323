@@ -20,8 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
-import com.example.decierdoch_le341.data.Gender
 
 @Composable
 fun ScreenTopLabel(
@@ -53,24 +51,24 @@ fun ScreenSubHeading(
 }
 
 @Composable
-fun ChipButtons(
+fun <T> ChipButton(
     modifier: Modifier = Modifier,
-    navController: NavController,
-    genderOptions: Gender,
+    item: T,
     isSelected: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    label: (T) -> String
 ) {
     FilterChip(
         selected = isSelected,
         onClick = onClick,
         label = {
-            Text(text = genderOptions.gender, maxLines = 1)
+            Text(text = label(item), maxLines = 1)
         },
         leadingIcon = {
             if (isSelected) {
                 Icon(
                     imageVector = Icons.Filled.Done,
-                    contentDescription = "Gender",
+                    contentDescription = "Selected",
                     modifier = modifier.size(FilterChipDefaults.IconSize)
                 )
             }
@@ -79,11 +77,14 @@ fun ChipButtons(
     )
 }
 
+
 @Composable
-fun ChipGroup(
+fun <T> ChipGroup(
     modifier: Modifier = Modifier,
-    navController: NavController,
-    genderList: List<Gender>
+    items: List<T>,
+    isSelected: (T) -> Boolean,
+    onClick: (T) -> Unit,
+    label: (T) -> String
 ) {
     Box(
         modifier = modifier
@@ -95,12 +96,12 @@ fun ChipGroup(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            genderList.forEach { gender ->
-                ChipButtons(
-                    navController = navController,
-                    genderOptions = gender,
-                    isSelected = false, // Adjust this based on your selection logic,
-                    onClick = {}
+            items.forEach { item ->
+                ChipButton(
+                    item = item,
+                    isSelected = isSelected(item),
+                    onClick = { onClick(item) },
+                    label = label
                 )
             }
         }
