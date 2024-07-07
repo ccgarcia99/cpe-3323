@@ -82,7 +82,6 @@ fun AgeGroupScreen(modifier: Modifier = Modifier, navController: NavController) 
                 )
                 AgeGroupChipGroup(
                     modifier = modifier.layoutId(ConstraintId.ChipGroup.id),
-                    navController = navController,
                     ageGroups = ageGroup,
                     selectedAgeGroup = selectedAgeGroup,
                     onAgeGroupSelected = { ageGroup ->
@@ -98,7 +97,6 @@ fun AgeGroupScreen(modifier: Modifier = Modifier, navController: NavController) 
 @Composable
 fun AgeGroupChipGroup(
     modifier: Modifier = Modifier,
-    navController: NavController,
     ageGroups: List<AgeGroup>,
     selectedAgeGroup: AgeGroup?,
     onAgeGroupSelected: (AgeGroup) -> Unit

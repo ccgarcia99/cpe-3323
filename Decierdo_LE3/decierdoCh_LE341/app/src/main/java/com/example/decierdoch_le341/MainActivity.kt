@@ -134,7 +134,6 @@ fun MainScreen(modifier: Modifier = Modifier, navController: NavController) {
 
                     GenderChipGroup(
                         modifier = modifier.layoutId(ConstraintId.ChipGroup.id),
-                        navController = navController,
                         genderList = genderList,
                         selectedGender = selectedGender,
                         onGenderSelected = { gender ->
@@ -151,7 +150,6 @@ fun MainScreen(modifier: Modifier = Modifier, navController: NavController) {
 @Composable
 fun GenderChipGroup(
     modifier: Modifier = Modifier,
-    navController: NavController,
     genderList: List<Gender>,
     selectedGender: Gender?,
     onGenderSelected: (Gender) -> Unit
