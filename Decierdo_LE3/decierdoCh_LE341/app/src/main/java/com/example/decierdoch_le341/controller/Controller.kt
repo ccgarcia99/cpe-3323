@@ -12,4 +12,7 @@ sealed class ConstraintId(
     data object ChipGroup : ConstraintId("chipGroup")
     data object TopLabel : ConstraintId("topLabel")
     data object SubHeading : ConstraintId("subHeading")
+    data object Summary : ConstraintId("giftSummary")
+    data object Suggestions : ConstraintId("giftSuggestions")
+    data object ItemRow : ConstraintId("itemRow")
 }

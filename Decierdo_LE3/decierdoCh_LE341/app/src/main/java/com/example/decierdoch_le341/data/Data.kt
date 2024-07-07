@@ -4,9 +4,9 @@ data class AgeGroup(val ageGroup: String)
 data class Gender(val gender: String, val ageGroup: List<AgeGroup>)
 
 val ageGroup = listOf(
-    AgeGroup("infant"),
-    AgeGroup("adolescent"),
-    AgeGroup("adult")
+    AgeGroup("Infant"),
+    AgeGroup("Adolescent"),
+    AgeGroup("Adult")
 )
 
 val genderList = listOf(
