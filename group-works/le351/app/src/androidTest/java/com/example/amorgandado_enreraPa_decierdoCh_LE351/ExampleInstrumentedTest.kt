@@ -1,4 +1,4 @@
-package com.example.decierdoch_le351
+package com.example.amorgandado_enreraPa_decierdoCh_LE351
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.decierdoch_le351", appContext.packageName)
+        assertEquals("com.example.amorgandado_enreraPa_decierdoCh_LE351", appContext.packageName)
     }
 }

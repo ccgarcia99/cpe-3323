@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.decierdoch_le351"
+    namespace = "com.example.amorgandado_enreraPa_decierdoCh_LE351"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.decierdoch_le351"
+        applicationId = "com.example.amorgandado_enreraPa_decierdoCh_LE351"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

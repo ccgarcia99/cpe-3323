@@ -8,7 +8,7 @@
                 the header is an interactive element.
 * */
 
-package com.example.decierdoch_le351
+package com.example.amorgandado_enreraPa_decierdoCh_LE351
 
 import android.content.Context
 import android.media.MediaPlayer
@@ -45,7 +45,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.decierdoch_le351.ui.theme.DecierdoCh_LE351Theme
+import com.example.amorgandado_enreraPa_decierdoCh_LE351.ui.theme.DecierdoCh_LE351Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

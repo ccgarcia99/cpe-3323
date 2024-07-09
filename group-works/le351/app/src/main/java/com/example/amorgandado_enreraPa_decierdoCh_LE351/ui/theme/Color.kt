@@ -1,4 +1,4 @@
-package com.example.decierdoch_le351.ui.theme
+package com.example.amorgandado_enreraPa_decierdoCh_LE351.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

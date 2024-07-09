@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "decierdoCh_LE351"
+rootProject.name = "amorgandaDo_enreraPa_decierdoCh_LE351"
 include(":app")

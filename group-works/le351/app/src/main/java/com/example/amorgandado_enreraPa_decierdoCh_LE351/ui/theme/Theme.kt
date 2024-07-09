@@ -1,6 +1,5 @@
-package com.example.decierdoch_le351.ui.theme
+package com.example.amorgandado_enreraPa_decierdoCh_LE351.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
