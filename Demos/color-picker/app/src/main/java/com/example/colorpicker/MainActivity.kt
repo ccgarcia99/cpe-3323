@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -137,7 +136,7 @@ fun ColorBox(color: Color, modifier: Modifier = Modifier) {
 
 @Composable
 fun ColorPickerPrompt(showDialog: MutableState<Boolean>, modifier: Modifier = Modifier) {
-    ElevatedButton(
+    TextButton(
         modifier = modifier,
         onClick = {
             showDialog.value = true
@@ -174,7 +173,7 @@ fun ColorPickerDialog(
                 HsvColorPicker(
                     modifier = Modifier
                         .fillMaxWidth(0.8f)
-                        .height(450.dp),
+                        .height(250.dp),
                     controller = colorController,
                     onColorChanged = { colorEnvelope: ColorEnvelope ->
                         colorViewModel.updateColor(colorEnvelope.color)
