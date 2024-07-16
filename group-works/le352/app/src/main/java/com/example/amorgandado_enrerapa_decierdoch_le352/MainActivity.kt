@@ -124,7 +124,7 @@ fun LinksAlertDialog(
     val links = listOf(
         "Instagram" to "https://www.instagram.com",
         "Google" to "https://www.google.com",
-        "Reddit" to "https://www.reddit.com",
+        "JSTOR" to "https://www.jstor.org",
         "YouTube" to "https://www.youtube.com",
         "LinkedIn" to "https://www.linkedin.com"
     )
